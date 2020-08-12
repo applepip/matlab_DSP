@@ -18,6 +18,6 @@ M =5; b = ones(M,1)/M; a =[1];
 y = filter(b,a,x);
 
 subplot(2,1,2);
-plot(k,s,'b-', k,y,'r-');
+plot(k,s,'b-',k,y,'r-');
 xlabel('Time index k'); 
 legend('s[k]','y[k]');
