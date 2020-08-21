@@ -72,22 +72,19 @@ figure(2);
 subplot(2,2,1);stem(t2,x2,'.');
 line([0,max(t2)],[0,0]); % 绘制直线函数
 axis([0,max(t2),min(x2),max(x2)]);
-title('抽样序列x2(n)(fs2=400Hz)')
+title('抽样序列x1(n)(fs2=400Hz)')
 xlabel('n');ylabel('|X2(n)|');
 
 f = fs2*k/512;
-subplot(2,2,2);plot(f,abs(X2)/max(abs(X2)));
+subplot(2,2,2);plot(f1,abs(X2)/max(abs(X2)));
 title('x2(n)的幅度谱');xlabel('f(Hz)');ylabel('|X2(jf)|');
 
 subplot(2,2,3);stem(t3,x3,'.');
 line([0,max(t3)],[0,0]); % 绘制直线函数
-axis([0,max(t3),min(x3),max(x3)]);
-title('抽样序列x3(n)(fs3=200Hz)')
-xlabel('n');ylabel('|X3(n)|');
+axis([0,max(t2),min(x2),max(x2)]);
+title('抽样序列x1(n)(fs2=400Hz)')
+xlabel('n');ylabel('|X2(n)|');
 
-f = fs3*k/512;
-subplot(2,2,4);plot(f,abs(X3)/max(abs(X3)));
-title('x3(n)的幅度谱');xlabel('f(Hz)');ylabel('|X3(jf)|');
-
-% 当f>=500Hz时，|Xa(jf)|的值很小。所以，fs=1kHz的抽样序列x1(n)的频率混叠很小；
-% 而fs=400Hz时，x2(n)的频谱混叠较大；而fs=200Hz时，x2(n)的频谱混叠较大；
+f = fs2*k/512;
+subplot(2,2,2);plot(f1,abs(X2)/max(abs(X2)));
+title('x2(n)的幅度谱');xlabel('f(Hz)');ylabel('|X2(jf)|');
